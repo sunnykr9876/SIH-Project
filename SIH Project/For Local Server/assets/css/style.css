@@ -1,0 +1,138 @@
+/* htdocs/assets/css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-gov: #003366; /* Deep Navy Blue (Income Tax Theme) */
+    --secondary-gov: #F47B20; /* Saffron/Orange Accent */
+    --gov-light: #E8F0FE;
+    --text-dark: #202124;
+    --bg-main: #f4f6f9;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-main);
+    /* Subtle background pattern for official look */
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23003366" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+}
+
+/* Official Top Header */
+.top-header {
+    background-color: white;
+    border-bottom: 3px solid var(--secondary-gov);
+    padding: 10px 0;
+}
+
+/* Custom Navbar */
+.navbar-gov {
+    background-color: var(--primary-gov);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.navbar-gov .navbar-brand,
+.navbar-gov .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+.navbar-gov .nav-link:hover {
+    color: var(--secondary-gov) !important;
+}
+
+/* Buttons */
+.btn-gov-primary {
+    background-color: var(--secondary-gov);
+    color: white;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s;
+}
+.btn-gov-primary:hover {
+    background-color: #d16212;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-gov-outline {
+    border: 2px solid var(--primary-gov);
+    color: var(--primary-gov);
+    font-weight: 600;
+}
+.btn-gov-outline:hover {
+    background-color: var(--primary-gov);
+    color: white;
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.08);
+}
+.card-header {
+    background-color: white;
+    border-bottom: 2px solid var(--gov-light);
+    border-radius: 10px 10px 0 0 !important;
+}
+
+/* Sidebar */
+.list-group-item.active {
+    background-color: var(--primary-gov) !important;
+    border-color: var(--primary-gov) !important;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer-gov {
+    background-color: #001a33;
+    color: #a3b8cc;
+    border-top: 4px solid var(--secondary-gov);
+}
+.footer-gov a {
+    color: #a3b8cc;
+    text-decoration: none;
+}
+.footer-gov a:hover {
+    color: white;
+}
+/* --- NEW PREMIUM UI UNIFICATION STYLES --- */
+
+/* Form Input Styling (Soft Grey inside White Cards) */
+.form-control, .form-select {
+    background-color: #f8f9fa; /* Very light grey */
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 0.6rem 0.75rem;
+    transition: all 0.2s;
+}
+.form-control:focus, .form-select:focus {
+    background-color: #ffffff;
+    border-color: var(--primary-gov);
+    box-shadow: 0 0 0 0.2rem rgba(0, 51, 102, 0.15);
+}
+
+/* Subtle grouped boxes for forms */
+.form-section-box {
+    background-color: #f8f9fa; /* Light grey box */
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+/* Scholarship Card Hover Lift */
+.card-hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-hover-lift:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* Clean Info Badges inside schemes */
+.info-box-grey {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 12px 15px;
+}

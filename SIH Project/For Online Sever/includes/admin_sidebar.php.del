@@ -1,0 +1,38 @@
+<?php
+// htdocs/includes/admin_sidebar.php
+// Detect current page to highlight active navigation state automatically
+$currentPage = basename($_SERVER['PHP_SELF']);
+?>
+<div class="card shadow-sm border-0 mb-4">
+    <div class="card-header text-white py-3" style="background-color: var(--primary-gov);">
+        <h6 class="mb-0 fw-bold"><i class="fa-solid fa-shield-halved me-2"></i>Admin Control Center</h6>
+    </div>
+    <div class="list-group list-group-flush rounded-bottom">
+        
+        <!-- Dashboard Overview -->
+        <a href="dashboard.php" class="list-group-item list-group-item-action py-3 <?= ($currentPage == 'dashboard.php') ? 'active bg-primary border-primary text-white fw-bold' : 'text-dark' ?>">
+            <i class="fa-solid fa-chart-line me-2 text-primary"></i> Overview & Analytics
+        </a>
+        
+        <!-- Application Scrutiny & AI Review -->
+        <a href="applications.php" class="list-group-item list-group-item-action py-3 <?= ($currentPage == 'applications.php' || $currentPage == 'review_application.php') ? 'active bg-primary border-primary text-white fw-bold' : 'text-dark' ?>">
+            <i class="fa-solid fa-folder-open me-2 text-warning"></i> Application Scrutiny
+        </a>
+        
+        <!-- Scholarship Scheme CMS -->
+        <a href="manage_scholarships.php" class="list-group-item list-group-item-action py-3 <?= ($currentPage == 'manage_scholarships.php') ? 'active bg-primary border-primary text-white fw-bold' : 'text-dark' ?>">
+            <i class="fa-solid fa-graduation-cap me-2 text-success"></i> Manage Schemes (CMS)
+        </a>
+        
+        <!-- Reports Generation -->
+        <a href="reports.php" class="list-group-item list-group-item-action py-3 <?= ($currentPage == 'reports.php') ? 'active bg-primary border-primary text-white fw-bold' : 'text-dark' ?>">
+            <i class="fa-solid fa-file-excel me-2 text-info"></i> Generate Reports
+        </a>
+        
+        <!-- System Settings & Credentials -->
+        <a href="settings.php" class="list-group-item list-group-item-action py-3 <?= ($currentPage == 'settings.php') ? 'active bg-primary border-primary text-white fw-bold' : 'text-dark' ?>">
+            <i class="fa-solid fa-gear me-2 text-secondary"></i> System Settings
+        </a>
+        
+    </div>
+</div>
